@@ -35,7 +35,6 @@ if (function_exists('ini_set')) {
 	} elseif (!file_exists($install . DS . $dispatcher)) {
 		$install = $root . PATH_SEPARATOR .  DS . 'Users' . DS . 'raharu' . DS . 'work' . DS . 'lilycAutoMatonServer' . DS . 'vendors' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib';
 	}
-var_dump($install);
 
 	ini_set('include_path', $install . PATH_SEPARATOR . ini_get('include_path'));
 	unset($root, $appDir, $install, $composerInstall);
