@@ -1,0 +1,18 @@
+2016-09-29 11:33:39 Error: Fatal Error (64): Cannot redeclare class App in [/vagrant/vendors/cakephp/cakephp/lib/Cake/Core/App.php, line 65]
+2016-09-29 11:33:39 Error: [FatalErrorException] Cannot redeclare class App
+Stack Trace:
+#0 /vagrant/vendors/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/vagrant/vendor...', 65)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/vagrant/vendor...', 65, Array)
+#2 /vagrant/vendors/cakephp/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/vagrant/vendor...', 65, Array)
+#3 /vagrant/vendors/cakephp/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-29 11:35:54 Error: Fatal Error (64): Cannot redeclare class App in [/vagrant/vendors/cakephp/cakephp/lib/Cake/Core/App.php, line 65]
+2016-09-29 11:35:54 Error: [FatalErrorException] Cannot redeclare class App
+Stack Trace:
+#0 /vagrant/vendors/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/vagrant/vendor...', 65)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/vagrant/vendor...', 65, Array)
+#2 /vagrant/vendors/cakephp/cakephp/lib/Cake/Core/App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/vagrant/vendor...', 65, Array)
+#3 /vagrant/vendors/cakephp/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
