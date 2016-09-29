@@ -22,5 +22,49 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-    public $components = array('DebugKit.Toolbar');
+    public $components = array(
+        'DebugKit.Toolbar',
+        'Paginator',
+        'Security',
+    );
+
+    /**
+     * Helpers (Boostcake)
+     *
+     * @var array
+     */
+    public $helpers = array(
+        'Session',
+        'Html' => array('className' => 'BoostCake.BoostCakeHtml'),
+        'Form' => array('className' => 'BoostCake.BoostCakeForm'),
+        'Paginator' => array('className' => 'BoostCake.BoostCakePaginator'),
+    );
+
+    /**
+     * 先行フィルター
+     */
+    public function beforeFilter() {
+        parent::beforeFilter();
+
+        // 設定ファイルの読み込み
+        Configure::load("admin_config.php");
+
+        //Basic認証
+        $this->autoRender = false;
+        $loginId = Configure::read("basicauth.id");;
+        $loginPassword = Configure::read("basicauth.password");;
+
+        if (!isset($_SERVER['PHP_AUTH_USER'])) {
+            header('WWW-Authenticate: Basic realm="Please enter your ID and password"');
+            header('HTTP/1.0 401 Unauthorized');
+            die("id / password Required");
+        } else {
+            if ($_SERVER['PHP_AUTH_USER'] != $loginId || $_SERVER['PHP_AUTH_PW'] != $loginPassword) {
+                header('WWW-Authenticate: Basic realm="Please enter your ID and password"');
+                header('HTTP/1.0 401 Unauthorized');
+                die("Invalid id / password combination.  Please try again");
+            }
+        }
+        $this->autoRender = true;
+    }
 }

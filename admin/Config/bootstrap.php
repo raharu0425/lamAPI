@@ -59,13 +59,12 @@ CakePlugin::loadAll();
  * CakePlugin::load('DebugKit'); // Loads a single plugin named DebugKit
  */
 // プラグインの読み込み
-App::build(
-    array('Plugin' =>
-        array(
-            ROOT . DS . 'plugins' . DS,
-        )
-    )
-);
+App::build(array(
+    'Model'                     => array(ROOT . DS . 'api' . DS . 'Model' . DS),
+    'Model/Behavior'            => array(ROOT . DS . 'api' . DS . 'Model' . DS . 'Behavior'),
+    'Model/Datasource'          => array(ROOT . DS . 'api' . DS . 'Model' . DS . 'Datasource'),
+    'Plugin'                    => array(ROOT . DS . 'plugins' . DS),
+));
 
 // composerのautoloadを読み込み
 require_once ROOT . DS . 'vendors/autoload.php';
