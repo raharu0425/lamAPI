@@ -37,6 +37,13 @@ if (!defined('ROOT')) {
 }
 
 /**
+ * The full path to the directory which holds "app", WITHOUT a trailing DS.
+ */
+if (!defined('CAKE_CORE_ROOT')) {
+	define('CAKE_CORE_ROOT', dirname(dirname(dirname(dirname(__FILE__)))));
+}
+
+/**
  * The actual directory name for the "app".
  */
 if (!defined('APP_DIR')) {
@@ -57,7 +64,8 @@ if (!defined('APP_DIR')) {
  * The following line differs from its sibling
  * /app/webroot/index.php
  */
-define('CAKE_CORE_INCLUDE_PATH',  DS . 'Users' . DS . 'raharu' . DS . 'work' . DS . 'lilycAutoMatonServer' . DS . 'vendors' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib');
+#define('CAKE_CORE_INCLUDE_PATH',  DS . 'Users' . DS . 'raharu' . DS . 'work' . DS . 'lilycAutoMatonServer' . DS . 'vendors' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib');
+define('CAKE_CORE_INCLUDE_PATH',  CAKE_CORE_ROOT . DS . 'vendors' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib');
 
 /**
  * This auto-detects CakePHP as a composer installed library.
