@@ -2,28 +2,28 @@
 
 !.gitkeep
 
-/tmp/cache/*
-!/tmp/cache/models/
-!/tmp/cache/persistent/
-!/tmp/cache/views/
+*/tmp/cache/*
+!*/tmp/cache/models/
+!*/tmp/cache/persistent/
+!*/tmp/cache/views/
 
-/tmp/cache/models/*
-!/tmp/cache/models/.gitkeep
+*/tmp/cache/models/*
+!*/tmp/cache/models/.gitkeep
 
-/tmp/cache/persistent/*
-!/tmp/cache/persistent/.gitkeep
+*/tmp/cache/persistent/*
+!*/tmp/cache/persistent/.gitkeep
 
-/tmp/cache/views/*
-!/tmp/cache/views/.gitkeep
+*/tmp/cache/views/*
+!*/tmp/cache/views/.gitkeep
 
-/tmp/logs/*
-!/tmp/logs/.gitkeep
+*/tmp/logs/*
+!*/tmp/logs/.gitkeep
 
-/tmp/sessions/*
-!/tmp/sessions/.gitkeep
+*/tmp/sessions/*
+!*/tmp/sessions/.gitkeep
 
-/tmp/tests/*
-!/tmp/tests/.gitkeep
+*/tmp/tests/*
+!*/tmp/tests/.gitkeep
 
-/webroot/files/*
-!/webroot/files/.gitkeep
+*/webroot/files/*
+!*/webroot/files/.gitkeep

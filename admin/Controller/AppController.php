@@ -49,6 +49,11 @@ class AppController extends Controller {
         // 設定ファイルの読み込み
         Configure::load("admin_config.php");
 
+        $this->Security->blackHoleCallback = "securityError";
+        $this->Security->requireAuth('login');
+        $this->Security->validatePost = false;
+        $this->Security->csrfCheck = false;
+
         //Basic認証
         $this->autoRender = false;
         $loginId = Configure::read("basicauth.id");;

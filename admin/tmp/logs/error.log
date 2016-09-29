@@ -220,3 +220,64 @@ Stack Trace:
 #3 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Core/App.php(943): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2016-09-29 15:33:36 Error: [MissingControllerException] Controller class DataChaptersController could not be found.
+Exception Attributes: array (
+  'class' => 'DataChaptersController',
+  'plugin' => NULL,
+)
+Request URL: /lamAdmin/DataChapters
+Stack Trace:
+#0 /vagrant/lam/admin/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-29 15:34:41 Error: [MissingComponentException] Component class FileProcessorComponent could not be found.
+Exception Attributes: array (
+  'class' => 'FileProcessorComponent',
+  'plugin' => false,
+)
+Request URL: /lamAdmin/DataChapters
+Stack Trace:
+#0 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('FileProcessor', Array)
+#1 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Controller/Controller.php(644): ComponentCollection->init(Object(DataChaptersController))
+#2 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DataChaptersController), Object(CakeRequest))
+#4 /vagrant/lam/admin/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-09-29 15:36:22 Error: [BadRequestException] The request has been black-holed
+Request URL: /lamAdmin/DataChapters
+Stack Trace:
+#0 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Controller/Component/SecurityComponent.php(240): SecurityComponent->blackHole(Object(DataChaptersController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(DataChaptersController))
+#2 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DataChaptersController), Object(CakeRequest))
+#8 /vagrant/lam/admin/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-09-29 15:39:51 Error: [BadRequestException] The request has been black-holed
+Request URL: /lamAdmin/DataChapters
+Stack Trace:
+#0 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Controller/Component/SecurityComponent.php(240): SecurityComponent->blackHole(Object(DataChaptersController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(DataChaptersController))
+#2 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DataChaptersController), Object(CakeRequest))
+#8 /vagrant/lam/admin/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-09-29 15:40:24 Error: [BadRequestException] The request has been black-holed
+Request URL: /lamAdmin/DataChapters
+Stack Trace:
+#0 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Controller/Component/SecurityComponent.php(240): SecurityComponent->blackHole(Object(DataChaptersController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(DataChaptersController))
+#2 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Utility/ObjectCollection.php(128): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#5 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Controller/Controller.php(678): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#7 /vagrant/lam/vendors/cakephp/cakephp/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DataChaptersController), Object(CakeRequest))
+#8 /vagrant/lam/admin/webroot/index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}

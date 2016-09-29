@@ -21,4 +21,25 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+    /**
+     * @Override
+     * getColumnTypes
+     *
+     */
+    public function getColumnTypes($get_reserve_coulum = true)
+    {
+        if($get_reserve_coulum) return parent::getColumnTypes();
+
+        $coulum_types = parent::getColumnTypes();
+        if(isset($coulum_types['created'])){
+            unset($coulum_types['created']);
+        }
+        if(isset($coulum_types['modified'])){
+            unset($coulum_types['modified']);
+        }
+
+        return $coulum_types;
+    }
+
 }
