@@ -325,21 +325,17 @@
  *       Please check the comments in bootstrap.php for more info on the cache engines available
  *       and their settings.
  */
+
+/*
 $engine = 'File';
 
-// In development mode, caches should expire quickly.
 $duration = '+999 days';
 if (Configure::read('debug') > 0) {
 	$duration = '+10 seconds';
 }
 
-// Prefix each application on the same server with a different string, to avoid Memcache and APC conflicts.
 $prefix = 'api_';
 
-/**
- * Configure the cache used for general framework caching. Path information,
- * object listings, and translation cache files are stored with this configuration.
- */
 Cache::config('_cake_core_', array(
 	'engine' => $engine,
 	'prefix' => $prefix . 'cake_core_',
@@ -348,14 +344,20 @@ Cache::config('_cake_core_', array(
 	'duration' => $duration
 ));
 
-/**
- * Configure the cache for model and datasource caches. This cache configuration
- * is used to store schema descriptions, and table listings in connections.
- */
 Cache::config('_cake_model_', array(
 	'engine' => $engine,
 	'prefix' => $prefix . 'cake_model_',
 	'path' => CACHE . 'models' . DS,
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
+));
+ */
+Cache::config('default', array(
+    'engine' => 'Redis',
+    'server' => '192.168.183.200',
+    'port' => 6379,
+    'prefix' => null,
+    'duration' => 3600 * 24,
+    'probability' => 100,
+    'persistent' => true
 ));

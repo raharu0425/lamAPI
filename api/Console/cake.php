@@ -20,13 +20,6 @@ if (!defined('DS')) {
 	define('DS', DIRECTORY_SEPARATOR);
 }
 
-/**
- * CakeCoreのパス
- */
-if (!defined('CAKE_CORE_ROOT')) {
-	define('CAKE_CORE_ROOT', dirname(dirname(dirname(dirname(__FILE__)))));
-}
-
 $dispatcher = 'Cake' . DS . 'Console' . DS . 'ShellDispatcher.php';
 
 if (function_exists('ini_set')) {
