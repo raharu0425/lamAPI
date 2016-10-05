@@ -154,97 +154,6 @@
         ]
     },
     {
-        "name": "cakedc/migrations",
-        "version": "dev-develop",
-        "version_normalized": "dev-develop",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/CakeDC/migrations.git",
-            "reference": "26347a63240c72907c639b36a2a24130f082827b"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/CakeDC/migrations/zipball/26347a63240c72907c639b36a2a24130f082827b",
-            "reference": "26347a63240c72907c639b36a2a24130f082827b",
-            "shasum": ""
-        },
-        "require": {
-            "composer/installers": "*",
-            "php": ">=5.2.8"
-        },
-        "time": "2016-08-03 16:22:01",
-        "type": "cakephp-plugin",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Cake Development Corporation",
-                "email": "team@cakedc.com",
-                "homepage": "http://cakedc.com"
-            }
-        ],
-        "description": "Migrations Plugin for CakePHP",
-        "homepage": "http://cakedc.com",
-        "keywords": [
-            "cakephp",
-            "migrations"
-        ]
-    },
-    {
-        "name": "symfony/yaml",
-        "version": "v2.8.11",
-        "version_normalized": "2.8.11.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/yaml.git",
-            "reference": "e7540734bad981fe59f8ef14b6fc194ae9df8d9c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/yaml/zipball/e7540734bad981fe59f8ef14b6fc194ae9df8d9c",
-            "reference": "e7540734bad981fe59f8ef14b6fc194ae9df8d9c",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.9"
-        },
-        "time": "2016-09-02 01:57:56",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.8-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Yaml\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Yaml Component",
-        "homepage": "https://symfony.com"
-    },
-    {
         "name": "phpunit/php-text-template",
         "version": "1.2.1",
         "version_normalized": "1.2.1.0",
@@ -715,6 +624,150 @@
             "bootstrap",
             "cakephp",
             "twitter"
+        ]
+    },
+    {
+        "name": "symfony/yaml",
+        "version": "v2.8.12",
+        "version_normalized": "2.8.12.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/yaml.git",
+            "reference": "e7540734bad981fe59f8ef14b6fc194ae9df8d9c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/yaml/zipball/e7540734bad981fe59f8ef14b6fc194ae9df8d9c",
+            "reference": "e7540734bad981fe59f8ef14b6fc194ae9df8d9c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "time": "2016-09-02 01:57:56",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.8-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Yaml\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Yaml Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "josegonzalez/cakephp-entity",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/josegonzalez/cakephp-entity.git",
+            "reference": "3399358cb8a81828b6ed6899a722cf7f2bf64395"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/josegonzalez/cakephp-entity/zipball/3399358cb8a81828b6ed6899a722cf7f2bf64395",
+            "reference": "3399358cb8a81828b6ed6899a722cf7f2bf64395",
+            "shasum": ""
+        },
+        "require": {
+            "composer/installers": "*",
+            "php": ">=5.4"
+        },
+        "time": "2015-07-06 19:28:00",
+        "type": "cakephp-plugin",
+        "extra": {
+            "installer-name": "Entity"
+        },
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Yosuke Basuke Suzuki",
+                "homepage": "http://basuke.com/",
+                "role": "Author"
+            },
+            {
+                "name": "Jose Diaz-Gonzalez",
+                "email": "email@josediazgonzalez.com",
+                "homepage": "http://josediazgonzalez.com",
+                "role": "Maintainer"
+            }
+        ],
+        "description": "Use model objects/classes instead of arrays in your CakePHP application",
+        "homepage": "https://github.com/josegonzalez/cakephp-entity",
+        "keywords": [
+            "cakephp",
+            "entity",
+            "model",
+            "models",
+            "objects",
+            "orm"
+        ]
+    },
+    {
+        "name": "cakedc/migrations",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/CakeDC/migrations.git",
+            "reference": "a376c781462b505b57808899c6ab764d40a042fe"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/CakeDC/migrations/zipball/a376c781462b505b57808899c6ab764d40a042fe",
+            "reference": "a376c781462b505b57808899c6ab764d40a042fe",
+            "shasum": ""
+        },
+        "require": {
+            "composer/installers": "*",
+            "php": ">=5.2.8"
+        },
+        "time": "2016-10-04 15:08:11",
+        "type": "cakephp-plugin",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Cake Development Corporation",
+                "email": "team@cakedc.com",
+                "homepage": "http://cakedc.com"
+            }
+        ],
+        "description": "Migrations Plugin for CakePHP",
+        "homepage": "http://cakedc.com",
+        "keywords": [
+            "cakephp",
+            "migrations"
         ]
     }
 ]

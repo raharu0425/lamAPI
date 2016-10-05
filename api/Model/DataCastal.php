@@ -1,10 +1,11 @@
 <?php
-App::uses('AppModel', 'Model');
+App::uses('Table', 'Entity.ORM');
+App::uses('DataCastalEntity', 'Model/Entity');
 /**
  * DataQuest Model
  *
  */
-class DataCastal extends AppModel {
+class DataCastal extends Table {
 
 /**
  * Use table

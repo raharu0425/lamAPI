@@ -74,7 +74,7 @@ require_once ROOT . DS . 'vendors/autoload.php';
 spl_autoload_unregister(array('App', 'load'));
 spl_autoload_register(array('App', 'load'), true, true);
 
-CakePlugin::load('DebugKit');
+CakePlugin::load(array('DebugKit', 'Entity'));
 
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter . By default CakePHP bundles two filters:

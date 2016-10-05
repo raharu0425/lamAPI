@@ -35,6 +35,12 @@ class UserController extends AppController {
     public function edit($id)
     {
         var_dump('edit' . $id);
+
+        $this->loadModel('DataCastal');
+
+        $entity = $this->DataCastal->find('first');
+
+        var_dump($entity->getName2Identifer());
     }
 
 }

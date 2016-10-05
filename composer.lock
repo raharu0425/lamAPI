@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ecb5271d8017df44c57017bd1a8004da",
-    "content-hash": "bff9a10565828895f46c24e1aee591de",
+    "hash": "ed6b93abf29bfde60f5ebf183bbe4042",
+    "content-hash": "5c24014d8d5cc6b54300ecad474a188e",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -58,12 +58,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/CakeDC/migrations.git",
-                "reference": "26347a63240c72907c639b36a2a24130f082827b"
+                "reference": "a376c781462b505b57808899c6ab764d40a042fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CakeDC/migrations/zipball/26347a63240c72907c639b36a2a24130f082827b",
-                "reference": "26347a63240c72907c639b36a2a24130f082827b",
+                "url": "https://api.github.com/repos/CakeDC/migrations/zipball/a376c781462b505b57808899c6ab764d40a042fe",
+                "reference": "a376c781462b505b57808899c6ab764d40a042fe",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 "cakephp",
                 "migrations"
             ],
-            "time": "2016-08-03 16:22:01"
+            "time": "2016-10-04 15:08:11"
         },
         {
             "name": "cakephp/debug_kit",
@@ -245,6 +245,57 @@
                 "zikula"
             ],
             "time": "2016-08-13 20:53:52"
+        },
+        {
+            "name": "josegonzalez/cakephp-entity",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/josegonzalez/cakephp-entity.git",
+                "reference": "3399358cb8a81828b6ed6899a722cf7f2bf64395"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/josegonzalez/cakephp-entity/zipball/3399358cb8a81828b6ed6899a722cf7f2bf64395",
+                "reference": "3399358cb8a81828b6ed6899a722cf7f2bf64395",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "php": ">=5.4"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Entity"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yosuke Basuke Suzuki",
+                    "homepage": "http://basuke.com/",
+                    "role": "Author"
+                },
+                {
+                    "name": "Jose Diaz-Gonzalez",
+                    "email": "email@josediazgonzalez.com",
+                    "homepage": "http://josediazgonzalez.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Use model objects/classes instead of arrays in your CakePHP application",
+            "homepage": "https://github.com/josegonzalez/cakephp-entity",
+            "keywords": [
+                "cakephp",
+                "entity",
+                "model",
+                "models",
+                "objects",
+                "orm"
+            ],
+            "time": "2015-07-06 19:28:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -654,7 +705,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.11",
+            "version": "v2.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -705,7 +756,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "cakedc/migrations": 20
+        "cakedc/migrations": 20,
+        "josegonzalez/cakephp-entity": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
