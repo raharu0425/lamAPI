@@ -20,7 +20,11 @@
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
-	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+    Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+
+//API設定
+Router::mapResources('user');
+Router::parseExtensions('json');
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on

@@ -13,7 +13,8 @@
         "phpunit/phpunit": "3.7.*",
         "cakephp/debug_kit": "2.2.*",
         "cakedc/migrations": "dev-develop",
-        "slywalker/boost_cake": "*"
+        "slywalker/boost_cake": "*",
+        "josegonzalez/cakephp-entity": "dev-master"
     },
     "config": {
         "vendor-dir": "vendors/"
@@ -23,7 +24,8 @@
             "./plugins/{$name}/": [
                 "cakephp/debug_kit",
                 "cakedc/migrations",
-                "slywalker/boost_cake"
+                "slywalker/boost_cake",
+                "josegonzalez/cakephp-entity"
             ]
         }
     }
