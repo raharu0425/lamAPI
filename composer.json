@@ -14,7 +14,8 @@
         "cakephp/debug_kit": "2.2.*",
         "cakedc/migrations": "dev-develop",
         "slywalker/boost_cake": "*",
-        "josegonzalez/cakephp-entity": "dev-master"
+        "josegonzalez/cakephp-entity": "dev-master",
+        "rybakit/msgpack": "dev-master"
     },
     "config": {
         "vendor-dir": "vendors/"
@@ -25,7 +26,8 @@
                 "cakephp/debug_kit",
                 "cakedc/migrations",
                 "slywalker/boost_cake",
-                "josegonzalez/cakephp-entity"
+                "josegonzalez/cakephp-entity",
+                "rybakit/msgpack"
             ]
         }
     }

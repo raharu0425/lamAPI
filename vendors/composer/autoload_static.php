@@ -11,6 +11,10 @@ class ComposerStaticInit532e955abf6de7dff00e9af69cfad1d0
         array (
             'Symfony\\Component\\Yaml\\' => 23,
         ),
+        'M' => 
+        array (
+            'MessagePack\\' => 12,
+        ),
         'C' => 
         array (
             'Composer\\Installers\\' => 20,
@@ -21,6 +25,10 @@ class ComposerStaticInit532e955abf6de7dff00e9af69cfad1d0
         'Symfony\\Component\\Yaml\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
+        ),
+        'MessagePack\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rybakit/msgpack/src',
         ),
         'Composer\\Installers\\' => 
         array (

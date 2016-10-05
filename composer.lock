@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ed6b93abf29bfde60f5ebf183bbe4042",
-    "content-hash": "5c24014d8d5cc6b54300ecad474a188e",
+    "hash": "81de05b578bc927042c6db391759182c",
+    "content-hash": "8a29e752f759769971765fd5de6e7d54",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -663,6 +663,48 @@
             "time": "2013-01-13 10:24:48"
         },
         {
+            "name": "rybakit/msgpack",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rybakit/msgpack.php.git",
+                "reference": "3f4682ebf2ed2c02551b83f1b49e7841a2ca0e0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rybakit/msgpack.php/zipball/3f4682ebf2ed2c02551b83f1b49e7841a2ca0e0c",
+                "reference": "3f4682ebf2ed2c02551b83f1b49e7841a2ca0e0c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MessagePack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Leonovich",
+                    "email": "gen.work@gmail.com"
+                }
+            ],
+            "description": "A pure PHP implementation of the MessagePack serialization format.",
+            "keywords": [
+                "messagepack",
+                "msgpack",
+                "pure",
+                "streaming"
+            ],
+            "time": "2016-09-27 20:22:29"
+        },
+        {
             "name": "slywalker/boost_cake",
             "version": "1.0.6",
             "source": {
@@ -757,7 +799,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "cakedc/migrations": 20,
-        "josegonzalez/cakephp-entity": 20
+        "josegonzalez/cakephp-entity": 20,
+        "rybakit/msgpack": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
