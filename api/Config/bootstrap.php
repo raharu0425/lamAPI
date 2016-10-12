@@ -111,3 +111,8 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+
+//独自エラーハンドリング
+App::uses('AppException', 'Error');
+App::uses('AppExceptionRenderer', 'Error');

@@ -35,7 +35,51 @@ class UserController extends AppController {
      */
     public function add()
     {
-        var_dump('aa');
+        $this->LoadModels(['User', 'Player']);
+
+        //リクエストパラメータの取得
+        $name = $this->request->data('user_name');
+        $hash = $this->request->data('hash');
+
+        /*
+        //入力チェック
+        if(!$name || !$hash) throw new AppException('field create user (varidate_error)');
+         */
+
+
+        try {
+            $this->User->begin();
+            //$this->Player->begin();
+
+            //ユーザーデータ作成
+            $dto = $this->User->getBlankDto();
+            $dto['name'] =  'raharu0425';
+            $dto['hash'] =  'raharu0425';
+            $user = $this->User->save($dto);
+
+            var_dump($user);
+
+            //プレイヤーデータの作成
+            $p_dto = $this->Player->getDefaultDto($user);
+            $this->Player->save($p_dto);
+            /*
+            $user_dto = $this->User->getModelArray();
+            $user_dto['name'] = 'らはる';
+            $user_dto['hash'] = 'vavasdasdvasd';
+
+            var_dump($user_dto);
+            $this->User->save(['User' => $user_dto]);
+             */
+            
+            $this->User->commit();
+            //$this->Player->commit();
+        }catch(Exception $e){
+            $this->User->commit();
+            //$this->Player->commit();
+            throw new AppException($e->getMessage());
+        }
+
+
     }
 
     public function edit($id)
