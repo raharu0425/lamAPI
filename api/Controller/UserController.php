@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('Response', 'Response');
 #use MessagePack\Packer;
 #use MessagePack\BufferUnpacker;
 
@@ -35,50 +36,44 @@ class UserController extends AppController {
      */
     public function add()
     {
+        //モデルのロード
         $this->LoadModels(['User', 'Player']);
 
         //リクエストパラメータの取得
         $name = $this->request->data('user_name');
         $hash = $this->request->data('hash');
 
-        /*
+        //レスポンスの作成
+        $response = new Response($this);
+
         //入力チェック
         if(!$name || !$hash) throw new AppException('field create user (varidate_error)');
-         */
-
 
         try {
             $this->User->begin();
-            //$this->Player->begin();
+            $this->Player->begin();
 
             //ユーザーデータ作成
             $dto = $this->User->getBlankDto();
             $dto['name'] =  'raharu0425';
             $dto['hash'] =  'raharu0425';
             $user = $this->User->save($dto);
-
-            var_dump($user);
+            $response->addEntity($user);
 
             //プレイヤーデータの作成
             $p_dto = $this->Player->getDefaultDto($user);
-            $this->Player->save($p_dto);
-            /*
-            $user_dto = $this->User->getModelArray();
-            $user_dto['name'] = 'らはる';
-            $user_dto['hash'] = 'vavasdasdvasd';
+            $player = $this->Player->save($p_dto);
+            $response->addEntity($player);
 
-            var_dump($user_dto);
-            $this->User->save(['User' => $user_dto]);
-             */
-            
             $this->User->commit();
-            //$this->Player->commit();
+            $this->Player->commit();
         }catch(Exception $e){
-            $this->User->commit();
-            //$this->Player->commit();
+            $this->User->rollback();
+            $this->Player->rollback();
             throw new AppException($e->getMessage());
         }
 
+        echo json_encode($response->getResult());
 
     }
 
