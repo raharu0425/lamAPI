@@ -11,6 +11,7 @@
  */
 
 App::uses('Controller', 'Controller');
+use MessagePack\Packer;
 
 /**
  * Application Controller
@@ -23,4 +24,14 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
+    public function _output(Response $res)
+    {
+        $packer = new Packer();
+        $packed = $packer->pack($res->getResult());
+        echo $packed;
+    }
+
+
 }
+
+

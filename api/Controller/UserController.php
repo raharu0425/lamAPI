@@ -1,8 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
 App::uses('Response', 'Response');
-#use MessagePack\Packer;
-#use MessagePack\BufferUnpacker;
 
 /**
  * User Controller
@@ -72,36 +70,8 @@ class UserController extends AppController {
             throw new AppException($e->getMessage());
         }
 
-        echo json_encode($response->getResult());
-
-    }
-
-    public function edit($id)
-    {
-        var_dump('edit' . $id);
-        /*
-
-        $this->loadModel('DataCastal');
-
-        $entity = $this->DataCastal->find('first');
-
-        var_dump($entity->getName2Identifer());
-
-        $packer = new Packer();
-
-        $packed = $packer->pack(array('aa' => 1));
-
-
-        var_dump($packed);
-
-        $unpacker = new BufferUnpacker();
-
-        $unpacker->reset($packed);
-        $unpacked = $unpacker->unpack();
-
-        var_dump($unpacker);
-         */
-
+        //出力
+        $this->_output($response);
     }
 
 }
