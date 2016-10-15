@@ -19,6 +19,7 @@ class UserController extends AppController {
  *
  * @var array
  */
+    public $uses = array('User', 'Player');
 	public $components = array('Paginator', 'Session', 'Flash', 'RequestHandler');
     public $autoRender = false;
 
@@ -36,8 +37,6 @@ class UserController extends AppController {
      */
     public function add()
     {
-        //モデルのロード
-        $this->LoadModels(['User', 'Player']);
 
         //リクエストパラメータの取得
         $name = $this->request->data('user_name');

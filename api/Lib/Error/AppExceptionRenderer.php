@@ -27,23 +27,7 @@ class AppExceptionRenderer extends ExceptionRenderer {
             'error_exception' => $error,
         );
 
-        $meta = array(
-            'url' => $this->controller->request->here,
-            'method' => $this->controller->request->method(),
-        );
-        $this->controller->set(array(
-            'meta' => $meta,
-            'error' => array(
-                'message' => $message,
-                'code' => $api_error_code,
-            ),
-            'error_exception' => $error,
-            '_serialize' => array('meta', 'error')
-        ));
-
         echo json_encode($result);
-
-        //$this->_outputMessage('errorApi');
     }
 
 }

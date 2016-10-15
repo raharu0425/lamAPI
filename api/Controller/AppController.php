@@ -23,13 +23,4 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    /*
-     * モデルの複数読み込み対応
-     */
-    public function LoadModels($models = array())
-    {
-        foreach($models as $model){
-            $this->LoadModel($model);
-        }
-    }
 }
